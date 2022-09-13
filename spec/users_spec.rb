@@ -1,5 +1,6 @@
 require 'users'
 
+
 RSpec.describe User do
   describe '.create method' do
     it 'creates a new user' do
