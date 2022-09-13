@@ -1,3 +1,13 @@
+require_relative './prepare_test_database'
+
+# Runs the prepare_test_database helper file (that clears the data from the test database)
+RSpec.configure do |config|
+  config.before(:each) do
+    prepare_test_database
+  end
+end
+
+# Uses the test database for tests
 ENV['ENVIRONMENT'] = 'test'
 
 # Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'

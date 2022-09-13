@@ -44,9 +44,9 @@ psql=# CREATE DATABASE chitter;
 psql=# \c chitter
 ```
 
-4. Run the query file 01_create_accounts_table.sql in folder db/migrations
+4. Run the query file 01_create_peeps_table.sql in folder db/migrations
 
-5. Run the query file 02_create_peeps_table.sql in folder db/migrations
+5. Run the query file 02_create_accounts_table.sql in folder db/migrations
 
 6. Run the query file 03_add_user_id_to_peeps_table.sql in folder db/migrations
 
