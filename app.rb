@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/peeps'
+require './lib/users'
 
 class Chitter < Sinatra::Base
   configure :development do
@@ -20,6 +21,21 @@ class Chitter < Sinatra::Base
     # ]
     @peeps = Peeps.all
     erb :'peeps/peep_list'
+  end
+
+  # Sinatra posts the signup data from the signup form
+  post '/signup' do
+    User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
+    redirect '/login'
+  end
+
+  # Sinatra gets the signup data from the signup form
+  get '/signup' do
+
+  end
+
+  get '/login' do
+    erb :login
   end
 
   run! if app_file == $0

@@ -1,10 +1,12 @@
 # Chitter
 
-Chitter is a Twitter clone where users can:
+Chitter is a Twitter clone built on Sinatra DSL framework.
 
-- register for an account (WIP)
+Currently users can:
+
+- register for an account
 - log in (WIP)
-- make a peep (same as a tweet)
+- make a peep (same as a tweet) WIP
 - see a list of peeps
 - log out (WIP)
 
