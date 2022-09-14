@@ -23,13 +23,13 @@ class Chitter < Sinatra::Base
     erb :'peeps/peep_list'
   end
 
-  # posts the signup data from the signup form
+  # Sinatra posts the signup data from the signup form
   post '/signup' do
     User.create(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/login'
   end
 
-  # gets the signup data from the signup form
+  # Sinatra gets the signup data from the signup form
   get '/signup' do
 
   end
